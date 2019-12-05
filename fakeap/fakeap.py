@@ -139,7 +139,7 @@ class FakeAccessPoint(object):
         return temp
 
     def get_radiotap_header(self):
-        radiotap_packet = RadioTap(len=18, present='Flags+Rate+Channel+dBm_AntSignal+Antenna', notdecoded='\x00\x6c' + get_frequency(self.channel) + '\xc0\x00\xc0\x01\x00\x00')
+        radiotap_packet = RadioTap(len=18, present='Flags+Rate+Channel+dBm_AntSignal+Antenna', notdecoded='\x00\x8c' + get_frequency(self.channel) + '\xc0\x00\xc0\x01\x00\x00')
         return radiotap_packet
 
     def run(self):
